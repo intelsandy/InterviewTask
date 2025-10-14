@@ -1,0 +1,7 @@
+// @import '../scss/variables.scss';
+
+@mixin font($font-size: var(--font14), $font-weight:400, $color: var(--whiteclr), $line-height:normal){
+    font: {size: $font-size;weight: $font-weight;}
+    color: $color;line-height: $line-height;}
+
+@mixin borderRadius($radius: 30px){border-radius: $radius;border-color: var(--border-color);}

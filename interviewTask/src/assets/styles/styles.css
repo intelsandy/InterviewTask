@@ -1,0 +1,37 @@
+:root {
+  --primary-color: #010203;
+  --secondary-color: #6c757d;
+  --border-color:#44C7FC
+  --spacing-unit: 16px;
+  --font-size-base: 1em;
+}
+
+body {
+  background: var(--primary-color);
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: url("../images/header_bg.png") no-repeat;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  width: auto;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 30px;
+  border-color: var(--border-color);
+}/*# sourceMappingURL=styles.css.map */
