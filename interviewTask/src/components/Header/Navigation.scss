@@ -1,0 +1,247 @@
+@use "../../assets/styles/variables";
+@use "../../assets/styles/mixin";
+
+:root {
+  --primary-color: #010203;
+  --secondary-color: #6c757d;
+  --border-color: #44c7fc;
+  --spacing-unit: 16px;
+  --font-size-base: 1em;
+}
+
+.navigation {
+  @include mixin.flex-center-between;
+  @include mixin.borderRadius;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  border: 1px solid var(--border-color);
+  width: auto;
+  padding: 9px 15px 9px 35px;
+  gap: 10px;
+  min-width: 960px;
+  backdrop-filter: blur(80px);
+  &::before {
+    content: "";
+    background: url("../../assets/images/nav-bg.png") no-repeat;
+    position: absolute;
+    height: 890px;
+    width: 1354px;
+    top: -630px;
+    left: -240px;
+  }
+  & .logo {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  & .nav-list {
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    & .nav-item {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      &:hover,
+      &:active {
+        background: none;
+        color: #33c4ff;
+      }
+    }
+    & > li {
+      padding: 16px 20px;
+    }
+  }
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  & span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    display: block;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.has-submenu .arrow {
+  margin-left: 5px;
+  font-size: 0.5em;
+  width: 15px;
+  height: 15px;
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 65px;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  z-index: 10;
+  border: 1px solid var(--border-color);
+}
+
+.submenu.open {
+  display: block;
+  & li {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    min-width: 800px;
+    &::before {
+      height: 800px;
+      top: -600px;
+      left: -240px;
+      width: 1210px;
+    }
+  }
+  .home-carousel {
+    margin-top: 170px;
+    .container {
+      .imageSec {
+        width: 500px;
+        height: auto;
+        img {
+          width: 100%;
+        }
+        &::after {
+          height: 185px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  header {
+    z-index: 9;
+  }
+  .navigation {
+    min-width: 500px;
+    &::before {
+      background-size: 100%;
+      height: 430px;
+      width: 700px;
+      top: -340px;
+      left: -90px;
+    }
+  }
+
+  .hamburger {
+    display: flex;
+    position: relative;
+    z-index: 2;
+  }
+  .navigation {
+    .nav-list {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+      &.open {
+        display: flex;
+        border: 1px solid var(--border-color);
+        width: 100%;
+        top: 42px;
+        background: #000;
+        transition: 035s all ease-in-out;
+      }
+    }
+    .nav-list .nav-item {
+      padding: 0.5rem 1rem;
+      &.has-submenu {
+        flex-direction: column;
+        align-items: flex-start;
+        .arrow {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+        }
+      }
+    }
+    .submenu {
+      position: static;
+      box-shadow: none;
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+  }
+  .home-carousel {
+    .container {
+      .contectSec {
+        h1 {
+          font-size: 35px;
+        }
+        p {
+          width: 420px;
+        }
+      }
+      .imageSec {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .navigation .nav-list {
+    width: 100px;
+  }
+  .navigation {
+    min-width: 370px;
+  }
+  .home-carousel {
+    margin-top: 90px;
+    .container {
+      flex-direction: column;
+      .imageSec {
+        position: relative;
+        width: 350px;
+        top: inherit;
+        transform: none;
+      }
+      .contectSec {
+        max-width: 90%;
+        padding-left: 0;
+        p {
+          width: 380px;
+        }
+      }
+    }
+  }
+}

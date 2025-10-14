@@ -1,7 +1,62 @@
 // @import '../scss/variables.scss';
-
+:root {
+  --primary-color: #010203;
+  --secondary-color: #6c757d;
+  --border-color:#44C7FC
+  --spacing-unit: 16px;
+  --font-size-base: 1em;
+}
 @mixin font($font-size: var(--font14), $font-weight:400, $color: var(--whiteclr), $line-height:normal){
     font: {size: $font-size;weight: $font-weight;}
     color: $color;line-height: $line-height;}
 
-@mixin borderRadius($radius: 30px){border-radius: $radius;border-color: var(--border-color);}
+@mixin borderRadius($radius: 80px){border-radius: $radius;}
+
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin btnGradient {
+background: linear-gradient(#010b14, #010b14) padding-box, linear-gradient(to top, #101010, #1e7699) border-box;
+}
+
+@mixin btnGradient2 {
+background: linear-gradient(#160c18, #160c18) padding-box, linear-gradient(to top, #082531, #1e7699) border-box;
+}
+@mixin btnGradient3 {
+background: linear-gradient(#2737cf, #160c18) padding-box, linear-gradient(to top, #6562FB, #1e7699) border-box;
+}
+@mixin defaulBtn {
+border-radius: 50em;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #b5b0b7;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+@mixin btnStyle {
+  @include btnGradient;
+  @include defaulBtn;  
+}
+@mixin btnStyle2 {
+  @include btnGradient2;
+  @include defaulBtn;  
+  font-size: 14px;
+   padding: 12px 14px;
+   width: 121px;
+  box-shadow: 0 4px 16px rgba(218, 38, 222, 0.22);
+}
+@mixin btnStyle3 {
+  @include btnGradient3;
+  @include defaulBtn;  
+  font-size: 14px;
+  width: 166px;
+   padding: 12px 35px;
+    box-shadow: 0 10px 40px rgba(63, 74, 175, 0.5);
+}

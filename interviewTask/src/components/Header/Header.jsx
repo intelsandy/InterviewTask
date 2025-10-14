@@ -1,11 +1,12 @@
+import HomeCarousel from "../HomeCarousel"
 import Navigation from "./Navigation"
 
 const Header = () => {
   return (
     <header>
-      <div className='container'>
+      <div className="container">
         <Navigation />
-        <h1>Welcome to the Interview Task</h1>
+        {/* <HomeCarousel /> */}
       </div>
     </header>
   )
