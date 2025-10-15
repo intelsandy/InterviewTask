@@ -66,32 +66,10 @@ header {
   top: 0;
   width: 100%;
   height: 116px;
-}
-header::before {
-  content: "";
-  width: 100%;
-  height: 464px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: url("../images/header_bg.png") repeat 0 0;
+  z-index: 999;
 }
 
-.home-carousel {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  margin-top: 250px;
-}
-.home-carousel .container {
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  position: relative;
-}
-.home-carousel .container .contectSec {
+.contectSec {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -101,7 +79,7 @@ header::before {
   max-width: 60%;
   padding-left: 80px;
 }
-.home-carousel .container .contectSec h1 {
+.contectSec h2 {
   text-align: left;
   font-weight: 500;
   font-size: 55px;
@@ -111,7 +89,7 @@ header::before {
   -webkit-text-fill-color: transparent;
   margin: 20px 0;
 }
-.home-carousel .container .contectSec p {
+.contectSec p {
   text-align: left;
   font-size: 18px;
   font-weight: 300;
@@ -120,7 +98,7 @@ header::before {
   line-height: 150%;
   margin-bottom: 0;
 }
-.home-carousel .container .contectSec .btn-primary {
+.contectSec .btn-primary {
   background: linear-gradient(#010b14, #010b14) padding-box, linear-gradient(to top, #101010, #1e7699) border-box;
   border-radius: 50em;
   border: 1px solid transparent;
@@ -132,8 +110,14 @@ header::before {
   font-family: "Inter", sans-serif;
   display: flex;
   align-items: center;
+  width: 182px;
+  height: 39px;
+  padding: 0;
+  justify-content: center;
+  position: relative;
+  z-index: 999;
 }
-.home-carousel .container .contectSec .btn-primary-typ2 {
+.contectSec .btn-primary-typ2 {
   background: linear-gradient(#160c18, #160c18) padding-box, linear-gradient(to top, #082531, #1e7699) border-box;
   border-radius: 50em;
   border: 1px solid transparent;
@@ -146,16 +130,20 @@ header::before {
   display: flex;
   align-items: center;
   font-size: 14px;
-  padding: 12px 14px;
+  padding: 13px 14px;
   width: 121px;
   box-shadow: 0 4px 16px rgba(218, 38, 222, 0.22);
+  padding: 0;
+  height: 46px;
+  justify-content: center;
+  font-weight: 500;
 }
-.home-carousel .container .contectSec .btn-primary-typ2 svg {
-  width: 18px;
-  height: 18px;
+.contectSec .btn-primary-typ2 svg {
+  width: 26px;
+  height: auto;
   padding-left: 6px;
 }
-.home-carousel .container .contectSec .btn-primary-typ3 {
+.contectSec .btn-primary-typ3 {
   background: linear-gradient(#2737cf, #160c18) padding-box, linear-gradient(to top, #6562FB, #1e7699) border-box;
   border-radius: 50em;
   border: 1px solid transparent;
@@ -175,15 +163,40 @@ header::before {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
 }
-.home-carousel .container .contectSec .btn-primary-typ3 svg {
-  width: 18px;
-  height: 18px;
+.contectSec .btn-primary-typ3 svg {
+  width: 26px;
+  height: auto;
   padding-left: 6px;
 }
-.home-carousel .container .contectSec .btn-sec {
+.contectSec .btn-sec {
   display: flex;
   gap: 16px;
   margin-top: 40px;
+}
+
+.home-carousel {
+  position: relative;
+  z-index: 123;
+  height: 100%;
+  margin-top: 250px;
+  padding-top: 0;
+}
+.home-carousel::before {
+  content: "";
+  width: 100%;
+  height: 464px;
+  position: absolute;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../images/header_bg.png") repeat 0 0;
+}
+.home-carousel .container {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
 }
 .home-carousel .container .imageSec {
   width: 838px;
@@ -204,4 +217,132 @@ header::before {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   background-size: 100%;
+}
+.home-carousel .container .imageSec .tags {
+  position: absolute;
+  top: 0;
+  background: rgba(144, 128, 146, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px 16px;
+  transition: all 0.3s ease-in-out;
+}
+@keyframes spin {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(220);
+  }
+}
+.home-carousel .container .imageSec .tags.tag1 {
+  right: 0;
+  top: 30%;
+}
+.home-carousel .container .imageSec .tags.tag2 {
+  left: 16%;
+  top: 60%;
+}
+.home-carousel .container .imageSec .tags.tag3 {
+  right: 6%;
+  top: 53%;
+}
+
+section {
+  padding: 100px 0;
+  color: #fff;
+}
+
+.paymentProcess {
+  position: relative;
+}
+.paymentProcess .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.paymentProcess::before {
+  content: "";
+  background: url("../images/light-stiking.svg");
+  width: 160px;
+  height: 106px;
+  position: absolute;
+  left: 500px;
+  z-index: 9;
+  top: 110px;
+}
+.paymentProcess::after {
+  content: "";
+  width: 750px;
+  height: 751px;
+  position: absolute;
+  top: -14%;
+  left: 12%;
+  background: url("../images/radial-gradient.png");
+}
+.paymentProcess h2 {
+  font-size: 40px;
+  font-weight: 500;
+  width: 60%;
+  background: #ffffff;
+  background: linear-gradient(to right, #ffffff 0%, #fff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.paymentProcess p {
+  width: 550px;
+}
+
+.focusText h1 {
+  color: #fff;
+  font-size: 90px;
+  font-weight: 600;
+  line-height: 140%;
+  padding-left: 80px;
+  letter-spacing: 2px;
+}
+.focusText .glow-letter {
+  --progress: 0;
+  --gray-r: 107;
+  --gray-g: 114;
+  --gray-b: 128;
+  --white-r: 255;
+  --white-g: 255;
+  --white-b: 255;
+  font-family: "Inter", sans-serif;
+  color: rgb(calc(var(--gray-r) + (var(--white-r) - var(--gray-r)) * var(--progress)), calc(var(--gray-g) + (var(--white-g) - var(--gray-g)) * var(--progress)), calc(var(--gray-b) + (var(--white-b) - var(--gray-b)) * var(--progress)));
+  text-shadow: 0 0 20px rgba(41, 32, 255, calc(0.8 * var(--progress))), 0 0 40px rgba(41, 32, 255, calc(0.6 * var(--progress))), 0 0 60px rgba(41, 32, 255, calc(0.4 * var(--progress)));
+}
+
+.paymentServices .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.paymentServices .btn-primary {
+  width: auto;
+  padding: 12px 16px;
+}
+.paymentServices h2 {
+  font-size: 40px;
+  font-weight: 500;
+  width: 80%;
+  background: #ffffff;
+  background: linear-gradient(to right, #ffffff 0%, #fff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.paymentServices .btn-sec .btn-primary-typ2 {
+  display: none;
+}
+.paymentServices .btn-sec .btn-primary-typ3 {
+  padding: 12px 30px;
+  border-radius: 10px;
 }/*# sourceMappingURL=styles.css.map */
