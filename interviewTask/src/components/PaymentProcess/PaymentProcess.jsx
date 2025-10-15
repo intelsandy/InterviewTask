@@ -1,5 +1,6 @@
 import ContentSec from "../ContentSec/ContentSec";
 import sdkImage from "../../assets/images/sdk-img.png";
+import "./PaymentProcess.css";
 
 const paymentContent = {
   heading: "Simplify the payments process",
@@ -20,7 +21,7 @@ const PaymentProcess = () => {
           buttons={paymentContent.buttons}
         />
         <figure>
-          <img src={sdkImage} alt="payment-process" />
+          <img src={sdkImage} alt={paymentContent.heading} />
         </figure>
       </div>
     </section>

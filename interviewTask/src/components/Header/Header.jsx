@@ -1,4 +1,4 @@
-import HomeCarousel from "../HomeCarousel"
+import HomeCarousel from "../HomeCarousel/HomeCarousel"
 import Navigation from "../Navigation/Navigation"
 
 const Header = () => {

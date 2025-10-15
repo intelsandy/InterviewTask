@@ -1,0 +1,55 @@
+footer {
+  background: #000;
+  padding: 100px 0;
+  color: #fff;
+}
+footer .container {
+  display: flex;
+  gap: 100px;
+  gap: 100px;
+}
+footer .container .footer-details {
+  width: 450px;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+}
+footer .container .footer-details p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #b5b0b7;
+}
+footer .container .bottom_links {
+  display: flex;
+}
+footer .container .bottom_links div .label {
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 20px;
+}
+footer .container .bottom_links div .bottom_menu {
+  list-style-type: none;
+  padding: 0;
+}
+footer .container .bottom_links div .bottom_menu li {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+}
+footer .container .bottom_links div .bottom_menu li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+footer .container .bottom_links div .bottom_menu li a:hover {
+  color: #44c7fc;
+}
+footer .container .bottom_links div.typ2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  flex-direction: column;
+}
+footer .container .bottom_links div.typ2 .bottom_menu {
+  display: flex;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=Footer.css.map */

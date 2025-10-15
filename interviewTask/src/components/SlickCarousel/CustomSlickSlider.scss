@@ -1,0 +1,30 @@
+.slick-slider {
+  position: relative;
+
+  .slick-arrow {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    top: 110%;
+    border: 1.5px solid rgba(189, 160, 255, 0.13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      display: none;
+    }
+    svg {
+      width: 25px;
+      height: 25px;
+      color: #fff;
+    }
+  }
+  .slick-prev {
+    position: absolute;
+    left: 47%;
+  }
+  .slick-next {
+    position: absolute;
+    right: 47%;
+  }
+}

@@ -1,0 +1,39 @@
+.paymentProcess {
+  position: relative;
+}
+.paymentProcess .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.paymentProcess::before {
+  content: "";
+  background: url("../../assets/images/light-stiking.svg");
+  width: 160px;
+  height: 106px;
+  position: absolute;
+  left: 500px;
+  z-index: 9;
+  top: 110px;
+}
+.paymentProcess::after {
+  content: "";
+  width: 750px;
+  height: 751px;
+  position: absolute;
+  top: -14%;
+  left: 12%;
+  background: url("../../assets/images/radial-gradient.png");
+}
+.paymentProcess h2 {
+  font-size: 40px;
+  font-weight: 500;
+  width: 60%;
+  background: #ffffff;
+  background: linear-gradient(to right, #ffffff 0%, #fff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.paymentProcess p {
+  width: 550px;
+}/*# sourceMappingURL=PaymentProcess.css.map */

@@ -1,47 +1,7 @@
-// Colors
-
-// $mainclr : #FFA800;
-$mainclr: #00328b;
-// $bodyclr : #FFFCF1;
-$bodyclr: #fff3db;
-$secondaryBodyClr: #ffebc6;
-$tagBg: #ffa800;
-$footbg: #e2f7fc;
-$blueBg: #6aabe5;
-$textclr: #000000;
-$textclr2: #151515;
-// $redclr : #FF0000;
-$redclr: #ff6210;
-$whiteclr: #fff;
-$blackclr: #000000;
-// $bgColor : #E6F3F1;
-$bgColor: #fff4d9;
-$borderclr: #cacaca;
-$blkclr: #151515;
-$grayclr: #b2b2b2;
-$discountPrice: #aededb;
-$bannerSubHeading: #e6f3f1;
-// Font Family
-$GlobalFont: "Sora", sans-serif;
-
-//Font Size
-$basefontsize: 17px; //17px
-$font12: 12px; //12px
-$font14: 14px; //14px
-$font15: 15px; //15px
-$font20: 20px; //20px
-$font25: 25px; //25px
-$font30: 30px; //30px
-$font60: 60px;
-$font55: 3.4375; //55px
-$font40: 2.5rem; //40px
-
-$DefaultTransition: all 0.75s ease-in-out;
-$linearGradient: linear-gradient(
-  90deg,
-  var($mainclr) 3.8%,
-  #9d00b7 26.23%,
-  #efb12c 52.87%,
-  #9d00b7 78.31%,
-  var($mainclr) 99.94%
-);
+$primary-color: #010203;
+$secondary-color: #6c757d;
+$border-color: #44c7fc;
+$spacing-unit: 16px;
+$font-size-base: 1em;
+$btn-radius: 8px;
+$btn-shadow: 0 8px 24px 0 rgba(68, 199, 252, 0.25);

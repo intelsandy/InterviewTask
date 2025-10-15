@@ -1,6 +1,7 @@
 import ContentSec from "../ContentSec/ContentSec"
 import pentagraph from "../../assets/images/pentagraph.png";
 import CustomScrollBar from "../CustomScrollBar/CustomScrollBar";
+import "./PaymentServices.css";
 
 const carouselContent = {
   heading: "Streamlined for Payout Ease and Efficiency",
@@ -22,7 +23,7 @@ const PaymentServices = () => {
           buttons={carouselContent.buttons}
         />
         <figure>
-          <img src={pentagraph} alt="payment-process" />
+          <img src={pentagraph} alt={carouselContent.heading} />
         </figure>
     </div>
   </section>

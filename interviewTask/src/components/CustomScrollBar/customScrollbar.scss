@@ -11,7 +11,6 @@
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #a855f7 0%, #ec4899 100%);
   border-radius: 10px;
-  -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
 
@@ -31,20 +30,19 @@
   margin-left: -42px;
   margin-top: 40px;
 }
-
 .scrollbar-content {
   direction: ltr;
   padding-left: 0px;
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 27px;
+  }
+  p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+  }
 }
-.scrollbar-content h3 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 15px;
-  line-height: 27px;
-}
-.scrollbar-content p {
-  margin-bottom: 40px;
-  font-size: 16px;
-  font-weight: 400;
-  width: 100%;
-}/*# sourceMappingURL=customScrollbar.css.map */

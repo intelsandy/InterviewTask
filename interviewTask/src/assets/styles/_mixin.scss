@@ -1,67 +1,118 @@
 // @import '../scss/variables.scss';
-:root {
-  --primary-color: #010203;
-  --secondary-color: #6c757d;
-  --border-color:#44C7FC
-  --spacing-unit: 16px;
-  --font-size-base: 1em;
-}
-@mixin font($font-size: var(--font14), $font-weight:400, $color: var(--whiteclr), $line-height:normal){
-    font: {size: $font-size;weight: $font-weight;}
-    color: $color;line-height: $line-height;}
+$primary-color: #010203;
+$secondary-color: #6c757d;
+$border-color: #44c7fc;
+$spacing-unit: 16px;
+$font-size-base: 1em;
+$btn-radius: 8px;
+$btn-shadow: 0 8px 24px 0 rgba(68, 199, 252, 0.25);
 
-@mixin borderRadius($radius: 80px){border-radius: $radius;}
+@mixin font(
+  $font-size: var(--font14),
+  $font-weight: 400,
+  $color: var(--whiteclr),
+  $line-height: normal
+) {
+  font: {
+    size: $font-size;
+    weight: $font-weight;
+  }
+
+  color: $color;
+  line-height: $line-height;
+}
+
+@mixin borderRadius($radius: 80px) {
+  border-radius: $radius;
+}
 
 @mixin flex-center-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 @mixin btnGradient {
-background: linear-gradient(#010b14, #010b14) padding-box, linear-gradient(to top, #101010, #1e7699) border-box;
+  background: linear-gradient(#010b14, #010b14) padding-box,
+    linear-gradient(to top, #101010, #1e7699) border-box;
 }
 
 @mixin btnGradient2 {
-background: linear-gradient(#160c18, #160c18) padding-box, linear-gradient(to top, #082531, #1e7699) border-box;
+  background: linear-gradient(#160c18, #160c18) padding-box,
+    linear-gradient(to top, #082531, #1e7699) border-box;
 }
+
 @mixin btnGradient3 {
-background: linear-gradient(#2737cf, #160c18) padding-box, linear-gradient(to top, #6562FB, #1e7699) border-box;
+  background: linear-gradient(#2737cf, #160c18) padding-box,
+    linear-gradient(to top, #6562fb, #1e7699) border-box;
 }
+
 @mixin defaulBtn {
-border-radius: 50em;
-    border: 1px solid transparent;
-    padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #b5b0b7;
-    cursor: pointer;
-    font-family: "Inter", sans-serif;
-    display: flex;
-    align-items: center;
+  border-radius: 50em;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #b5b0b7;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 @mixin btnStyle {
   @include btnGradient;
-  @include defaulBtn;  
-}
-@mixin btnStyle2 {
-  @include btnGradient2;
-  @include defaulBtn;  
-  font-size: 14px;
-   padding: 13px 14px;
-   width: 121px;
-  box-shadow: 0 4px 16px rgba(218, 38, 222, 0.22);
-}
-@mixin btnStyle3 {
-  @include btnGradient3;
-  @include defaulBtn;  
-  font-size: 14px;
-  width: 166px;
-   padding: 12px 35px;
-    box-shadow: 0 10px 40px rgba(63, 74, 175, 0.5);
+  @include defaulBtn;
 }
 
-@mixin radialGradient($color1: rgba(45, 22, 82, 1) 0%, $color2: rgba(57, 122, 155, 1) 100%) {
-  background: #2D1652;
-background: radial-gradient(circle,rgba(45, 22, 82, 1) 0%, rgba(57, 122, 155, 1) 100%);
+@mixin btnStyle2 {
+  @include btnGradient2;
+  @include defaulBtn;
+  font-size: 14px;
+  padding: 13px 14px;
+  width: 121px;
+  box-shadow: 0 4px 16px rgba(218, 38, 222, 0.22);
+}
+
+@mixin btnStyle3 {
+  @include btnGradient3;
+  @include defaulBtn;
+  font-size: 14px;
+  width: 166px;
+  padding: 12px 35px;
+  box-shadow: 0 10px 40px rgba(63, 74, 175, 0.5);
+}
+
+@mixin radialGradient(
+  $color1: rgba(45, 22, 82, 1) 0%,
+  $color2: rgba(57, 122, 155, 1) 100%
+) {
+  background: #2d1652;
+  background: radial-gradient(
+    circle,
+    rgba(45, 22, 82, 1) 0%,
+    rgba(57, 122, 155, 1) 100%
+  );
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin btn-transition {
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == "tablet" {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
 }

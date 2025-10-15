@@ -1,0 +1,38 @@
+.paymentServices .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.paymentServices .container figure {
+  position: relative;
+}
+.paymentServices .container figure::before {
+  content: "";
+  background: url("../../assets/images/bigRadial.png");
+  position: absolute;
+  top: -50%;
+  left: -120%;
+  width: 1206px;
+  height: 1206px;
+  opacity: 0.4;
+}
+.paymentServices .btn-primary {
+  width: auto;
+  padding: 12px 16px;
+}
+.paymentServices h2 {
+  font-size: 40px;
+  font-weight: 500;
+  width: 80%;
+  background: #ffffff;
+  background: linear-gradient(to right, #ffffff 0%, #fff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.paymentServices .btn-sec .btn-primary-typ2 {
+  display: none;
+}
+.paymentServices .btn-sec .btn-primary-typ3 {
+  padding: 12px 30px;
+  border-radius: 10px;
+}/*# sourceMappingURL=PaymentServices.css.map */

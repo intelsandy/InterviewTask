@@ -1,0 +1,40 @@
+.paymentProcess {
+  position: relative;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &::before {
+    content: "";
+    background: url("../../assets/images/light-stiking.svg");
+    width: 160px;
+    height: 106px;
+
+    position: absolute;
+    left: 500px;
+    z-index: 9;
+    top: 110px;
+  }
+  &::after {
+    content: "";
+    width: 750px;
+    height: 751px;
+    position: absolute;
+    top: -14%;
+    left: 12%;
+    background: url("../../assets/images/radial-gradient.png");
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+    width: 60%;
+    background: #ffffff;
+    background: linear-gradient(to right, #ffffff 0%, #fff 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p {
+    width: 550px;
+  }
+}

@@ -1,18 +1,7 @@
 import React, { useState } from "react";
 import "./Navigation.scss";
 import { ChevronDown, ChevronUp } from 'lucide-react';
-
-const menuItems = [
-  { label: "Home",link:"/" },
-  {
-    label: "Ai Banking",
-    submenu: ["Overview", "Features", "Pricing", ]
-  },
-  { label: "Payments" },
-  { label: "Payouts" },
-  { label: "Payroll" },
-  { label: "Contact Us" }
-];
+import {menuItems} from "../../utils/data";
 
 const Navigation = () => {
   //State for Menu Open/Close
@@ -21,7 +10,7 @@ const Navigation = () => {
 
 
   return (
-    <nav className="navigation">
+    <nav className="navigation" role="navigation" aria-label="Main Navigation">
       <div className="logo">U<i>z</i>OPay</div>
       <button
         className="hamburger"
@@ -32,6 +21,7 @@ const Navigation = () => {
         <span />
         <span />
       </button>
+      
        <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
         {menuItems.map((item, idx) =>
           item.submenu ? (
@@ -39,6 +29,7 @@ const Navigation = () => {
               key={item.label}
               className="nav-item has-submenu"
               onClick={() => setAiSubmenuOpen(!aiSubmenuOpen)}
+              aria-label={item.label}
             >
               {item.label}
               <span className="arrow">
@@ -46,12 +37,12 @@ const Navigation = () => {
               </span>
               <ul className={`submenu ${aiSubmenuOpen ? "open" : ""}`}>
                 {item.submenu.map(sub => (
-                  <li key={sub}>{sub}</li>
+                  <li key={sub} aria-label={sub}>{sub}</li>
                 ))}
               </ul>
             </li>
           ) : (
-            <li key={item.label} className="nav-item">{item.label}</li>
+            <li key={item.label} className="nav-item" aria-label={item.label}>{item.label}</li>
           )
         )}
       </ul>

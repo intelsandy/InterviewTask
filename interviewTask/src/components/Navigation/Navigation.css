@@ -1,14 +1,6 @@
 :root {
   --primary-color: #010203;
   --secondary-color: #6c757d;
-  --border-color:#44C7FC
-  --spacing-unit: 16px;
-  --font-size-base: 1em;
-}
-
-:root {
-  --primary-color: #010203;
-  --secondary-color: #6c757d;
   --border-color: #44c7fc;
   --spacing-unit: 16px;
   --font-size-base: 1em;

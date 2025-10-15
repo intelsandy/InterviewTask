@@ -1,0 +1,26 @@
+.cards {
+  width: 307px;
+  height: 438px;
+  background: url("../../assets/images/cards-bg.png");
+  color: #fff;
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+}
