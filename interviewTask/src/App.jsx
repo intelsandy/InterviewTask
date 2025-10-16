@@ -26,8 +26,8 @@ function App() {
       <ReasonToPartner />
       <SimpleSlider />
       <EnhancingPayment />
-      {/* <CenterCarousel /> */}
-      {/* <Footer /> */}
+      <CenterCarousel />
+      <Footer />
     </>
   )
 }

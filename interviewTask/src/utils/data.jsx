@@ -3,8 +3,8 @@ import mobilephoneIcon from "../assets/images/mobilephone.png";
 import apiBankingIcon from "../assets/images/api-banking.png";
 import payoutsIcon from "../assets/images/payouts.png";
 import bulkPaymentsIcon from "../assets/images/bulk-payments.png";
-
-
+import TestProfileImage from "../assets/images/test-profile-img.png";
+import TestProfileImage2 from "../assets/images/test-profile-img2.png";
 
 export const carouselContent = {
   heading: "End-to-End Payout & Payroll Solutions for Digital Era.",
@@ -71,9 +71,45 @@ export const CardDetails = [
 }
 ]
 
+
+
+export const TestimonialCardDetails = [
+  {
+    description: "We trust them completely with our payments. The integration was seamless, and the service is top-notch.",
+    author: "Amit Sharma",
+    authorImage: TestProfileImage,
+    ratings: 5,
+    post: "CEO"
+  },
+  {
+    description: "We trust them completely with our payments. The integration was seamless, and the service is top-notch.",
+    author: "Priya Singh",
+    authorImage: TestProfileImage,
+    ratings: 4,
+    post: "CEO"
+  },
+  {
+    description: "We trust them completely with our payments. The integration was seamless, and the service is top-notch.",
+    author: "Amit Sharma",
+    authorImage: TestProfileImage,
+    ratings: 5,
+    post: "CEO"
+  },
+   {
+    description: "We trust them completely with our payments. The integration was seamless, and the service is top-notch.",
+    author: "Priya Singh",
+    authorImage: TestProfileImage,
+    ratings: 4,
+    post: "CEO"
+  }
+];
+
+
+
 export default {
   carouselContent,
   menuItems,
   buttonData,
-  CardDetails
+  CardDetails,
+  TestimonialCardDetails
 };  

@@ -4,4 +4,116 @@
   padding: 20px;
   color: rgb(48, 60, 71);
   box-shadow: 5px 53px 24px 0px rgba(0, 0, 0, 0.4);
+  margin: 50px;
+  border-radius: 10px;
+  border: 1px solid rgb(48, 60, 71);
+}
+.testimonialCard .testimonial-desc {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: rgb(194, 196, 200);
+}
+.testimonialCard .testimonial-author {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.testimonialCard .testimonial-author .author-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.testimonialCard .testimonial-author .author-details .author-info {
+  display: flex;
+  flex-direction: column;
+}
+.testimonialCard .testimonial-author .author-details .author-info .author-name {
+  color: rgb(194, 196, 200);
+  font-size: 14px;
+}
+.testimonialCard .testimonial-author .author-details .author-info .author-post {
+  font-size: 12px;
+}
+.testimonialCard .testimonial-author .author-details .author-ratings {
+  background: rgb(28, 21, 46);
+  border-radius: 30px;
+  padding: 0 7px;
+  font-size: 12px;
+  height: 20px;
+  border: 1px solid rgb(13, 9, 40);
+}
+.testimonialCard .testimonial-author .author-details .author-ratings i {
+  font-style: normal;
+  color: #3d47ad;
+}
+
+.slick-carousel.center {
+  padding: 100px 0;
+  height: 750px;
+  background: url("../../assets/images/testimonial-bg.png") no-repeat 100% 100%;
+}
+.slick-carousel.center .slick-slider.center .slick-list .slick-center .testimonialCard {
+  transform: scale(1.4);
+}
+.slick-carousel.center .slick-slider.center .slick-list .slick-center .testimonialCard .testimonial-desc {
+  transform: scale(0.8);
+}
+
+@media (max-width: 1024px) {
+  .testimonialCard {
+    margin: 35px;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .testimonialCard {
+    margin: 26px;
+  }
+  .slick-carousel.center .slick-slider.center .slick-list .slick-center .testimonialCard {
+    transform: scale(1.2);
+  }
+  .testimonialCard .testimonial-author .author-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 599px) {
+  .testimonialCard {
+    margin: 36px 10px;
+    padding: 5px;
+  }
+  .testimonialCard .testimonial-author {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .testimonialCard .testimonial-author .author-details {
+    align-items: center;
+  }
+  .slick-carousel .slick-slider .slick-prev {
+    position: absolute;
+    left: 50%;
+  }
+  .slick-carousel.center .slick-slider.center .slick-list .slick-center .testimonialCard {
+    transform: scale(1);
+  }
+  .slick-carousel.center {
+    padding: 100px 0 0;
+    height: 720px;
+  }
+  footer .container .footer-details {
+    gap: 10px;
+  }
+  footer .container .bottom_links {
+    padding: 20px;
+  }
+  footer .container .bottom_links div .label {
+    padding: 0 10px;
+  }
+  footer .container .bottom_links div .bottom_menu li {
+    padding: 10px 12px;
+  }
 }/*# sourceMappingURL=TestimonialCard.css.map */

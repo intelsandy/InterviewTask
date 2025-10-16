@@ -31,6 +31,11 @@
   right: 47%;
 }
 
+@media (max-width: 1024px) {
+  .slick-carousel .slick-slider .slick-prev {
+    left: 44%;
+  }
+}
 @media (max-width: 768px) {
   .slick-carousel .slick-slider .slick-prev {
     position: absolute;

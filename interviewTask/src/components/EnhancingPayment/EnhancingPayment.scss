@@ -33,7 +33,7 @@
         margin-bottom: 50px;
       }
       .react-tabs__tab {
-        width: 215px;
+        width: 245px;
         padding: 13px 12px;
         cursor: pointer;
         margin: 5px;
@@ -131,6 +131,13 @@
     height: auto;
     max-width: 90%;
     margin: 0 auto;
+  }
+  .enhancing-payment .tabs-container .react-tabs .react-tabs__tab-list {
+    width: 100%;
+  }
+  .enhancing-payment .tabs-container::after {
+    width: 850px;
+    height: 850px;
   }
 }
 
