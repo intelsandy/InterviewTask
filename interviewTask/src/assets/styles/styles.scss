@@ -361,3 +361,15 @@ section {
     display: none;
   }
 }
+
+@media (max-width: 360px) {
+  .focusText h1 {
+    padding-left: 20px;
+  }
+  .heading {
+    width: 320px;
+  }
+  .heading h2 {
+    font-size: 30px;
+  }
+}

@@ -138,3 +138,9 @@
     padding: 10px 12px;
   }
 }
+
+@media (max-width: 360px) {
+  .slick-carousel.center {
+    height: 640px;
+  }
+}

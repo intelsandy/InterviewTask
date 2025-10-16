@@ -116,4 +116,9 @@
   footer .container .bottom_links div .bottom_menu li {
     padding: 10px 12px;
   }
+}
+@media (max-width: 360px) {
+  .slick-carousel.center {
+    height: 640px;
+  }
 }/*# sourceMappingURL=TestimonialCard.css.map */

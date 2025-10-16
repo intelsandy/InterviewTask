@@ -50,7 +50,7 @@
     background-size: 100%;
   }
   .paymentProcess::before {
-    left: 220px;
+    left: 170px;
     top: 30px;
   }
   .custom-scrollbar {

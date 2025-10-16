@@ -128,4 +128,9 @@
   .home-carousel .container .imageSec::after {
     display: none;
   }
+}
+@media (max-width: 360px) {
+  .home-carousel .container .imageSec {
+    width: 320px;
+  }
 }/*# sourceMappingURL=HomeCarousel.css.map */

@@ -223,4 +223,12 @@
   .home-carousel .container .contectSec p {
     width: 380px;
   }
+}
+@media (max-width: 360px) {
+  .navigation {
+    min-width: 320px;
+  }
+  .home-carousel .container .imageSec {
+    width: 320px;
+  }
 }/*# sourceMappingURL=Navigation.css.map */

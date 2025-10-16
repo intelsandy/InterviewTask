@@ -73,4 +73,11 @@
   .paymentProcess .container .contectSec h2 {
     font-size: 35px;
   }
+}
+@media (max-width: 360px) {
+  .paymentServices .container figure,
+  .paymentProcess .container .contectSec,
+  .paymentProcess .container figure {
+    width: 320px;
+  }
 }/*# sourceMappingURL=PaymentProcess.css.map */

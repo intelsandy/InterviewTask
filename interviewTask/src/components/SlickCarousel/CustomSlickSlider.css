@@ -56,4 +56,9 @@
   .slick-carousel {
     padding-bottom: 50px;
   }
+}
+@media (max-width: 360px) {
+  .slick-carousel.center {
+    height: 870px;
+  }
 }/*# sourceMappingURL=CustomSlickSlider.css.map */
