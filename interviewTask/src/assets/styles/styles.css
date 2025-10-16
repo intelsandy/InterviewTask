@@ -304,7 +304,7 @@ section {
     font-size: 35px;
   }
   .bizsettle-text {
-    width: 300px;
+    width: 100%;
     height: auto;
   }
   .bizsettle-text img {

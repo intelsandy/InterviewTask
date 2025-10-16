@@ -60,7 +60,7 @@ export default function SimpleSlider() {
       breakpoint: 599,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 2
+        // slidesToScroll: 2
       }
     },
     {
@@ -70,9 +70,6 @@ export default function SimpleSlider() {
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
   };
   return (
