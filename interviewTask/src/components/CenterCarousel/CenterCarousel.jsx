@@ -1,10 +1,11 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './CustomSlickSlider.css';
+import '../SlickCarousel/CustomSlickSlider.css';
 import Slider from "react-slick";
 import Cards from "../Cards/Cards";
 import { CardDetails } from "../../utils/data";
 import { ChevronRight, ChevronLeft } from "lucide-react";
+import TestimonialCard from "../TestimonialCard/TestimonialCard";
 
 function SampleNextArrow(props) {
   const { className, onClick, } = props;
@@ -29,51 +30,17 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function SimpleSlider() {
+export default function CenterCarousel() {
   var settings = {
-    dots: false,
-    lazyLoad: true,
-    infinite: false,
+    className: "center",
+    centerMode: true,
+    focusOnSelect: true,
+    infinite: true,
+    centerPadding: "100px",
+    slidesToShow: 3,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 599,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
+    prevArrow: <SamplePrevArrow />
   };
   return (
     <section className="slick-carousel">
@@ -85,11 +52,7 @@ export default function SimpleSlider() {
         <Slider {...settings} >
           {CardDetails.map((card, idx) => (
             <div key={idx}>
-              <Cards
-                heading={card.heading}
-                description={card.description}
-                icon={card.icon}
-              />
+              <TestimonialCard />
             </div>
           ))}
         </Slider>

@@ -1,20 +1,24 @@
 .paymentServices {
+  position: relative;
+  &::before {
+    content: "";
+    background: url("../../assets/images/bigRadial2.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1092px;
+    height: 1092px;
+    opacity: 0.2;
+    // background: linear-gradient(135deg, #176ab1 0%, #cbd8f1 100%);
+    backdrop-filter: blur(150px);
+  }
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     figure {
       position: relative;
-      &::before {
-        content: "";
-        background: url("../../assets/images/bigRadial.png");
-        position: absolute;
-        top: -50%;
-        left: -120%;
-        width: 1206px;
-        height: 1206px;
-        opacity: 0.4;
-      }
     }
   }
   .btn-primary {
@@ -38,5 +42,46 @@
       padding: 12px 30px;
       border-radius: 10px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .paymentServices::before {
+    width: 760px;
+    height: 800px;
+    background-size: 100%;
+  }
+  .paymentProcess::before {
+    left: 300px;
+    top: 30px;
+  }
+  .custom-scrollbar {
+    margin-left: 0;
+  }
+  .paymentServices h2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 599px) {
+  .paymentServices::before {
+    width: 300px;
+    height: 300px;
+  }
+  .paymentServices .container {
+    flex-direction: column;
+  }
+  .contectSec {
+    max-width: 100%;
+    padding-left: 30px;
+  }
+  .custom-scrollbar {
+    margin-left: 0;
+    padding-left: 10px;
+    margin-top: 0;
+    width: 90%;
+  }
+  .paymentServices::before {
+    display: none;
   }
 }

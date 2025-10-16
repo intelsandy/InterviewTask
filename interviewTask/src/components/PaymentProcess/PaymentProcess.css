@@ -36,4 +36,41 @@
 }
 .paymentProcess p {
   width: 550px;
+}
+
+@media (max-width: 768px) {
+  .paymentProcess::before {
+    left: 230px;
+    top: -20px;
+  }
+  .paymentProcess::after {
+    background-size: 100%;
+    width: 600px;
+    height: 600px;
+  }
+}
+@media (max-width: 599px) {
+  .paymentProcess::after {
+    width: 300px;
+    height: 300px;
+    display: none;
+  }
+  .paymentProcess .container {
+    flex-direction: column;
+  }
+  .paymentProcess .container .contectSec {
+    width: 100%;
+    max-width: 360px;
+    padding-left: 0;
+  }
+  .paymentProcess::before {
+    left: 210px;
+    top: 40px;
+  }
+  .paymentProcess .container figure {
+    width: 360px;
+  }
+  .paymentProcess .container .contectSec h2 {
+    font-size: 35px;
+  }
 }/*# sourceMappingURL=PaymentProcess.css.map */

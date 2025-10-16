@@ -64,6 +64,16 @@ header {
   width: 100%;
   height: 116px;
   z-index: 999;
+  &::before {
+    content: "";
+    background: url("../../assets/images/nav-bg.png") no-repeat;
+    position: absolute;
+    height: 820px;
+    width: 100%;
+    top: -630px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 section {
@@ -135,5 +145,221 @@ section {
       height: 140px;
       transform: translateX(-50%);
     }
+  }
+}
+
+.build-the-feature {
+  padding: 0px 0 120px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    .contectSec {
+      width: 50%;
+      figure {
+        position: relative;
+        width: 100%;
+        figcaption {
+          font-family: Inter;
+          font-weight: 600;
+          font-style: Semi Bold;
+          font-size: 50px;
+          line-height: 70px;
+          letter-spacing: 0px;
+          vertical-align: middle;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          padding-left: 15px;
+          padding-top: 35px;
+          color: rgba(194, 196, 200, 1);
+          box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+    .btn-sec {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      figure {
+        position: relative;
+        width: 348px;
+        height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          position: absolute;
+        }
+
+        .btn_getStarted {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+// .btn {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   &.btn-get-started {
+//     @include mixin.btnStyle3;
+//     padding: 0 30px;
+//     backdrop-filter: blur(20px);
+//     padding: 12px 30px;
+//     border-radius: 10px;
+//     .btn-primary-typ3:hover {
+//       background: linear-gradient(90deg, #33c4ff 0%, #44c7fc 100%);
+//       transform: translateY(-4px) scale(1.07);
+//       color: #fff;
+//       box-shadow: 0 8px 24px 0 rgba(68, 199, 252, 0.25), 0 1.5px 8px 0 #33c4ff;
+//     }
+//     svg {
+//       width: 26px;
+//       height: auto;
+//       padding-left: 6px;
+//     }
+//   }
+// }
+
+.reason-to-partner figure {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.enhancing-payment .tabs-container {
+  width: 900px;
+}
+.paymentServices::before {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .paymentProcess {
+    .container {
+      .contectSec {
+        width: 50%;
+        h2 {
+          width: 100%;
+        }
+      }
+      figure {
+        width: 400px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .focusText h1 {
+    font-size: 60px;
+  }
+  .paymentServices .container figure {
+    width: 400px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .custom-carousel .slider-container {
+    height: 100%;
+  }
+  .container {
+    max-width: 970px;
+    margin: 0 auto;
+  }
+  .build-the-feature .container .contectSec figure figcaption {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .paymentServices::before {
+    width: 900px;
+    height: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 50px 0;
+  }
+  .focusText h1 {
+    padding-left: 0;
+    line-height: normal;
+  }
+  .heading h2 {
+    font-size: 40px;
+  }
+
+  .build-the-feature .container .contectSec figure,
+  .build-the-feature .container .btn-sec,
+  .build-the-feature .container .btn-sec figure {
+    width: 300px;
+  }
+  .build-the-feature .container .contectSec figure img,
+  .build-the-feature .container .btn-sec figure img {
+    width: 100%;
+  }
+  .build-the-feature .container .contectSec {
+    padding-left: 40px;
+  }
+  .build-the-feature .container .contectSec figure figcaption {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 599px) {
+  .heading {
+    width: 100%;
+  }
+  footer {
+    display: none;
+  }
+  .focusText {
+    padding-bottom: 50px;
+  }
+  .focusText h1 {
+    font-size: 40px;
+    line-height: 50px;
+    padding-left: 30px;
+  }
+  section {
+    padding: 50px 0;
+  }
+  .build-the-feature .container {
+    flex-direction: column;
+  }
+  .build-the-feature .container .contectSec {
+    width: 100%;
+  }
+  .build-the-feature {
+    padding: 0px 0 50px 0;
+  }
+  .heading h2 {
+    font-size: 35px;
+  }
+  .bizsettle-text {
+    width: 300px;
+    height: auto;
+    img {
+      width: 100%;
+    }
+  }
+  .heading span::before {
+    width: 100%;
+    display: none;
   }
 }

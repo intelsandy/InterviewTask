@@ -1,0 +1,28 @@
+@use "../../assets/styles/variables";
+@use "../../assets/styles/mixin";
+
+.btn_getStarted {
+  @include mixin.btnStyle3;
+  padding: 0 30px;
+  backdrop-filter: blur(20px);
+  padding: 12px 30px;
+  border-radius: 10px;
+  transition: variables.$defaulTransition;
+  &:hover {
+    background: linear-gradient(#2737cf, #160c18) padding-box,
+      linear-gradient(to top, #6562fb, #1e7699) border-box;
+    transform: translateY(-4px) scale(1.07);
+    color: #fff;
+    box-shadow: 0 10px 40px #3f4aaf80;
+  }
+  svg {
+    width: 26px;
+    height: auto;
+    padding-left: 6px;
+  }
+  svg {
+    width: 26px;
+    height: auto;
+    padding-left: 6px;
+  }
+}

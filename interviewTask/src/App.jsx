@@ -8,6 +8,9 @@ import PaymentServices from './components/PaymentServices/PaymentServices'
 import CustomCarousel from './components/CustomCarousel/CustomCarousel'
 import SimpleSlider from './components/SlickCarousel/SlickCarousel'
 import ReasonToPartner from './components/ReasonToPartner/ReasonToPartner'
+import BulidTheFeature from './components/BulidTheFeature/BulidTheFeature'
+import EnhancingPayment from './components/EnhancingPayment/EnhancingPayment'
+import CenterCarousel from './components/CenterCarousel/CenterCarousel'
 
 function App() {
 
@@ -19,9 +22,12 @@ function App() {
       <FocusText />
       <PaymentServices />
       <CustomCarousel />
+      <BulidTheFeature />
       <ReasonToPartner />
       <SimpleSlider />
-      <Footer />
+      <EnhancingPayment />
+      {/* <CenterCarousel /> */}
+      {/* <Footer /> */}
     </>
   )
 }

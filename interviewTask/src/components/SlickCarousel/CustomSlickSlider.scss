@@ -1,30 +1,55 @@
-.slick-slider {
-  position: relative;
+.slick-carousel {
+  padding: 0;
+  .slick-slider {
+    position: relative;
 
-  .slick-arrow {
-    width: 39px;
-    height: 39px;
-    border-radius: 50%;
-    top: 110%;
-    border: 1.5px solid rgba(189, 160, 255, 0.13);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &::before {
-      display: none;
+    .slick-arrow {
+      width: 39px;
+      height: 39px;
+      border-radius: 50%;
+      top: 110%;
+      border: 1.5px solid rgba(189, 160, 255, 0.13);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        display: none;
+      }
+      svg {
+        width: 25px;
+        height: 25px;
+        color: #fff;
+      }
     }
-    svg {
-      width: 25px;
-      height: 25px;
-      color: #fff;
+    .slick-prev {
+      position: absolute;
+      left: 47%;
+    }
+    .slick-next {
+      position: absolute;
+      right: 47%;
     }
   }
-  .slick-prev {
+}
+
+@media (max-width: 768px) {
+  .slick-carousel .slick-slider .slick-prev {
     position: absolute;
-    left: 47%;
+    left: 43%;
   }
-  .slick-next {
+  .slick-carousel .slick-slider .slick-next {
     position: absolute;
-    right: 47%;
+    right: 44%;
+  }
+  .slick-carousel {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 599px) {
+  .slick-carousel .slick-slider .slick-next {
+    right: 54%;
+  }
+  .slick-carousel {
+    padding-bottom: 50px;
   }
 }

@@ -23,15 +23,6 @@
   -webkit-backdrop-filter: blur(80px);
           backdrop-filter: blur(80px);
 }
-.navigation::before {
-  content: "";
-  background: url("../../assets/images/nav-bg.png") no-repeat;
-  position: absolute;
-  height: 820px;
-  width: 1354px;
-  top: -630px;
-  left: -240px;
-}
 .navigation .logo {
   font-size: 20px;
   font-weight: 700;
@@ -140,7 +131,7 @@
 }
 @media (max-width: 768px) {
   header {
-    z-index: 9;
+    z-index: 999;
   }
   .navigation {
     min-width: 500px;
